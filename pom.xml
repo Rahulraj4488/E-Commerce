@@ -37,7 +37,7 @@
 
             <artifactId>cucumber-java</artifactId>
 
-            <version>${cucumber.version}</version>
+            <version>7.21.0</version>
 
             <scope>test</scope>
 
@@ -52,7 +52,7 @@
 
             <artifactId>cucumber-junit-platform-engine</artifactId>
 
-            <version>${cucumber.version}</version>
+            <version>7.21.0</version>
 
             <scope>test</scope>
 
@@ -67,10 +67,30 @@
 
             <artifactId>junit-platform-suite</artifactId>
 
-            <version>1.14.2</version>
+            <version>1.10.0</version>
 
             <scope>test</scope>
 
+        </dependency>
+
+
+        <!-- Ensure all platform dependencies are 1.10.0 or later (consistently) -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-commons</artifactId>
+            <version>1.10.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-engine</artifactId>
+            <version>1.10.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>1.10.0</version>
         </dependency>
 
         <!-- Selenium Suite -->
@@ -78,6 +98,31 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.49.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.3</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Ensure all platform dependencies are 1.10.0 or later (consistently) -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-commons</artifactId>
+            <version>1.10.0</version>
         </dependency>
 
     </dependencies>
