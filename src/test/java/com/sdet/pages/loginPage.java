@@ -57,4 +57,7 @@ public void clickLoginButton()
     driver.findElement(By.id("//button[text()='Log in']")).click();
     driver.findElement(loginButton).click();
 }
+
+    public void verifyUsernameDisplayed(String userName) {
+    }
 }

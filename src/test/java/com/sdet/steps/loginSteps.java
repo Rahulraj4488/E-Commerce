@@ -49,7 +49,7 @@ public class LoginSteps {
 
         // TODO
         // verify username appears on page
-        loginPage.verifyUsernamediaplayed(TestContext.userName);
+        loginPage.verifyUsernameDisplayed(TestContext.userName);
 
         DriverFactory.quitDriver();
     }
