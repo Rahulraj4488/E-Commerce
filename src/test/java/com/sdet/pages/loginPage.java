@@ -39,7 +39,8 @@ public void clickLogin()
 
 public void enterUsername(String usernameValue)
 {
-    driver.findElement(By.id()).sendKeys();
+    driver.findElement(By.id("loginusername")).sendKeys();
+    driver.findElement(username).sendKeys();
 
 }
 
