@@ -1,7 +1,7 @@
 package com.sdet.steps;
 
 import com.sdet.api.UserApi;
-import com.sdet.pages.LoginPage;
+import com.sdet.pages.loginPage;
 import com.sdet.utils.DriverFactory;
 import com.sdet.utils.TestContext;
 
@@ -11,7 +11,7 @@ import io.cucumber.java.en.Then;
 
 public class LoginSteps {
 
-    private LoginPage loginPage;
+    private loginPage loginPage;
 
 
     @Given("I create a test customer using API")
@@ -30,7 +30,7 @@ public class LoginSteps {
         DriverFactory.initializeDriver();
 
         loginPage =
-                new LoginPage(DriverFactory.getDriver());
+                new loginPage(DriverFactory.getDriver());
 
         // TODO:
         // 1. Open application
