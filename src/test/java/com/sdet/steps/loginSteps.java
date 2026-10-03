@@ -18,9 +18,7 @@ public class LoginSteps {
     public void createTestCustomerUsingAPI() {
 
         UserApi userApi = new UserApi();
-
-        // TODO:
-        // call createUser()
+        userApi.createUser();
     }
 
 
@@ -34,10 +32,15 @@ public class LoginSteps {
 
         // TODO:
         // 1. Open application
+        loginPage.openApplication();
         // 2. Click Login
+        loginPage.clickLogin();
         // 3. Enter TestContext.username
+        loginPage.enterUsername(TestContext.userName);
         // 4. Enter TestContext.password
+        loginPage.enterPassword(TestContext.password);
         // 5. Click Login
+        loginPage.clickLoginButton();
     }
 
 
@@ -46,6 +49,7 @@ public class LoginSteps {
 
         // TODO
         // verify username appears on page
+        loginPage.verifyUsernamediaplayed(TestContext.userName);
 
         DriverFactory.quitDriver();
     }
