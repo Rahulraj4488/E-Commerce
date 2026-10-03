@@ -21,7 +21,8 @@ public class loginPage {
     private By loginButton =
             By.id("//button[text()='Log in']");
 
-    public void LoginPage(WebDriver driver) {
+    public void LoginPage(WebDriver driver)
+    {
         this.driver = driver;
 }
 
@@ -32,6 +33,26 @@ public void openApplication()
 
 public void clickLogin()
 {
-    driver.findElement(By.id("login2"))
+    driver.findElement(By.id("login2")).click();
+    driver.findElement(loginLink).click();
+}
+
+public void enterUsername(String usernameValue)
+{
+    driver.findElement(By.id()).sendKeys();
+
+}
+
+
+public void enterPassword(String passwordValue)
+{
+
+        // TODO
+}
+
+public void clickLoginButton()
+{
+
+        // TODO
 }
 }
