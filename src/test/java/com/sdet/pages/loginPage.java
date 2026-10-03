@@ -48,7 +48,8 @@ public void enterUsername(String usernameValue)
 public void enterPassword(String passwordValue)
 {
 
-        // TODO
+    driver.findElement(By.id("loginpassword")).sendKeys();
+    driver.findElement(password).sendKeys();
 }
 
 public void clickLoginButton()
