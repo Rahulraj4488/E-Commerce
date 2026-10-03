@@ -54,7 +54,7 @@ public void enterPassword(String passwordValue)
 
 public void clickLoginButton()
 {
-
-        // TODO
+    driver.findElement(By.id("//button[text()='Log in']")).click();
+    driver.findElement(loginButton).click();
 }
 }
