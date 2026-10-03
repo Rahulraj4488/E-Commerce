@@ -27,7 +27,7 @@ public class UserApi {
                     .header("content-Type", "application/json")
                     .body(requestBody)
                 .when()
-                    .post("/api/signup")
+                    .post("/signup")
                 .then()
                     .statusCode(200)
                     .extract()
