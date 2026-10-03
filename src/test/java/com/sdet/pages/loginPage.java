@@ -21,7 +21,7 @@ public class loginPage {
     private By loginButton =
             By.id("//button[text()='Log in']");
 
-    public void LoginPage(WebDriver driver)
+    public loginPage(WebDriver driver)
     {
         this.driver = driver;
 }
