@@ -16,21 +16,25 @@ public class loginSteps {
         userApi.createUser();
     }
     @When("I login to the application using the test customer")
-    public void loginUsingTestCustomer() {
+    public void loginUsingTestCustomer() throws InterruptedException {
         DriverFactory.initializeDriver();
         loginPageObj = new loginPage(DriverFactory.getDriver());
 
         // TODO:
         // 1. Open application
         loginPageObj.openApplication();
+        Thread.sleep(2000);
         // 2. Click Login
         loginPageObj.clickLogin();
         // 3. Enter TestContext.username
         loginPageObj.enterUsername(TestContext.userName);
+        Thread.sleep(2000);
         // 4. Enter TestContext.password
         loginPageObj.enterPassword(TestContext.password);
+        Thread.sleep(2000);
         // 5. Click Login
         loginPageObj.clickLoginButton();
+        Thread.sleep(2000);
     }
 
 
