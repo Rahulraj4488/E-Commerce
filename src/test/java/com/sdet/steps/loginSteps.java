@@ -39,8 +39,10 @@ public class loginSteps {
 
         // TODO
         // verify username appears on page
+        if (loginPageObj == null) {
+            throw new IllegalStateException("loginPage object is not initialized. Ensure loginUsingTestCustomer() is called first.");
+        }
         loginPageObj.verifyUsernameDisplayed(TestContext.userName);
-
         DriverFactory.quitDriver();
     }
 }
