@@ -69,7 +69,7 @@ public void clickLoginButton()
     {
         // Handle any alert that might appear
         handleAlert();
-        
+
         // Wait for the username to appear on the page after successful login
         // On demoBlaze, the username typically appears in the top-right corner
         WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
