@@ -75,7 +75,8 @@ public void clickLoginButton()
         WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
 
         // Use text containing the username to verify login success
-        By usernameDisplayedLocator = By.xpath("//a[contains(text(), '" + userName + "')]");
+        // Correct XPath for demoBlaze - username appears in navbar after login
+        By usernameDisplayedLocator = By.xpath("//button[contains(text(), '" + userName + "')]");
 
         try {
             wait.until(org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated(usernameDisplayedLocator));
