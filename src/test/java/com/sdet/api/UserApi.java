@@ -12,7 +12,7 @@ public class UserApi {
 
     public void createUser() {
         String userName = "sdet_user_" + System.currentTimeMillis();
-        String password = "Test@741";
+        String password = "F6-1905";
 
         String requestBody =
                 """
@@ -39,12 +39,12 @@ public class UserApi {
         System.out.println("Status: " + response.getStatusCode());
         System.out.println("Response: " + responseBody);
 
-        // DemoBlaze returns "This user already exist" if duplicate
-        if (responseBody.contains("This user already exist")) {
-            System.out.println("⚠️ User already exists, using existing credentials");
-        } else if (responseBody.contains("Sign up successful")) {
-            System.out.println("✅ User created successfully");
-        }
+//        // DemoBlaze returns "This user already exist" if duplicate
+//        if (responseBody.contains("This user already exist")) {
+//            System.out.println("⚠️ User already exists, using existing credentials");
+//        } else if (responseBody.contains("Sign up successful")) {
+//            System.out.println("✅ User created successfully");
+//        }
 
         // Parse response
         try {
