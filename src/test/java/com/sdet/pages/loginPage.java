@@ -29,9 +29,8 @@ public class loginPage {
         this.driver = driver;
 }
 
-public void openApplication()
-{
-
+public void openApplication() throws InterruptedException {
+    Thread.sleep(10000);
     driver.get("https://www.demoblaze.com");
 //    ChromeOptions options = new ChromeOptions();
 //    options.addArguments("--start-maximized");
