@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 
 public class loginSteps {
-    private loginPage loginPage;
+    private loginPage loginPageObj;
     @Given("I create a test customer using API")
     public void createTestCustomerUsingAPI() {
         UserApi userApi = new UserApi();
@@ -18,19 +18,19 @@ public class loginSteps {
     @When("I login to the application using the test customer")
     public void loginUsingTestCustomer() {
         DriverFactory.initializeDriver();
-        loginPage = new loginPage(DriverFactory.getDriver());
+        loginPageObj = new loginPage(DriverFactory.getDriver());
 
         // TODO:
         // 1. Open application
-        loginPage.openApplication();
+        loginPageObj.openApplication();
         // 2. Click Login
-        loginPage.clickLogin();
+        loginPageObj.clickLogin();
         // 3. Enter TestContext.username
-        loginPage.enterUsername(TestContext.userName);
+        loginPageObj.enterUsername(TestContext.userName);
         // 4. Enter TestContext.password
-        loginPage.enterPassword(TestContext.password);
+        loginPageObj.enterPassword(TestContext.password);
         // 5. Click Login
-        loginPage.clickLoginButton();
+        loginPageObj.clickLoginButton();
     }
 
 
@@ -39,7 +39,7 @@ public class loginSteps {
 
         // TODO
         // verify username appears on page
-        loginPage.verifyUsernameDisplayed(TestContext.userName);
+        loginPageObj.verifyUsernameDisplayed(TestContext.userName);
 
         DriverFactory.quitDriver();
     }
