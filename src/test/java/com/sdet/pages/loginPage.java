@@ -81,4 +81,15 @@ public void clickLoginButton()
             throw new AssertionError("Username '" + userName + "' was not displayed within the timeout period", e);
         }
     }
+
+    public void handleAlert() {
+        try {
+            org.openqa.selenium.Alert alert = driver.switchTo().alert();
+            String alertText = alert.getText();
+            System.out.println("Alert text: " + alertText);
+            alert.accept();
+        } catch (org.openqa.selenium.NoAlertPresentException e) {
+            // No alert present, continue
+        }
+    }
 }
