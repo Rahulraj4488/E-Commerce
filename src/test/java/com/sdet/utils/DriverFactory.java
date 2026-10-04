@@ -10,7 +10,8 @@ public class DriverFactory {
     public static void initializeDriver() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-       WebDriver driver = new ChromeDriver();
+//       WebDriver driver = new ChromeDriver();
+        DriverFactory.driver = new ChromeDriver();
         driver.manage().window().maximize();
 
     }
