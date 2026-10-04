@@ -65,6 +65,20 @@ public void clickLoginButton()
     driver.findElement(loginButton).click();
 }
 
-    public void verifyUsernameDisplayed(String userName) {
+    public void verifyUsernameDisplayed(String userName)
+    {
+        // Wait for the username to appear on the page after successful login
+        // On demoBlaze, the username typically appears in the top-right corner
+        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+
+        // Use text containing the username to verify login success
+        By usernameDisplayedLocator = By.xpath("//a[contains(text(), '" + userName + "')]");
+
+        try {
+            wait.until(org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated(usernameDisplayedLocator));
+            System.out.println("Username '" + userName + "' is successfully displayed on the page");
+        } catch (org.openqa.selenium.TimeoutException e) {
+            throw new AssertionError("Username '" + userName + "' was not displayed within the timeout period", e);
+        }
     }
 }
