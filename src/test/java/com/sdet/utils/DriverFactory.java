@@ -5,13 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverFactory {
-    private static WebDriver driver;
+    public static WebDriver driver;
 
     public static void initializeDriver() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
+
     }
 
     public static WebDriver getDriver() {
@@ -21,6 +22,7 @@ public class DriverFactory {
     public static void quitDriver() {
         if (driver != null) {
             driver.quit();
+            driver = null;
         }
     }
 }

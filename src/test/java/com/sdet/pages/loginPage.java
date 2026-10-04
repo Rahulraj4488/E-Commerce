@@ -2,6 +2,8 @@ package com.sdet.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class loginPage {
@@ -19,7 +21,7 @@ public class loginPage {
             By.id("loginpassword");
 
     private By loginButton =
-            By.id("//button[text()='Log in']");
+            By.xpath("//button[text()='Log in']");
 
     public loginPage(WebDriver driver)
     {
@@ -28,18 +30,23 @@ public class loginPage {
 
 public void openApplication()
 {
-    driver.get("https://www.demoblaze.com/");
+
+    driver.get("https://www.demoblaze.com");
+//    ChromeOptions options = new ChromeOptions();
+//    options.addArguments("--start-maximized");
+//    WebDriver driver = new ChromeDriver();
+//    driver.manage().window().maximize();
 }
 
 public void clickLogin()
 {
-    driver.findElement(By.id("login2")).click();
+//    driver.findElement(By.id("login2")).click();
     driver.findElement(loginLink).click();
 }
 
 public void enterUsername(String usernameValue)
 {
-    driver.findElement(By.id("loginusername")).sendKeys();
+//    driver.findElement(By.id("loginusername")).sendKeys();
     driver.findElement(username).sendKeys();
 
 }
@@ -48,13 +55,13 @@ public void enterUsername(String usernameValue)
 public void enterPassword(String passwordValue)
 {
 
-    driver.findElement(By.id("loginpassword")).sendKeys();
+//    driver.findElement(By.id("loginpassword")).sendKeys();
     driver.findElement(password).sendKeys();
 }
 
 public void clickLoginButton()
 {
-    driver.findElement(By.id("//button[text()='Log in']")).click();
+//    driver.findElement(By.id("//button[text()='Log in']")).click();
     driver.findElement(loginButton).click();
 }
 
