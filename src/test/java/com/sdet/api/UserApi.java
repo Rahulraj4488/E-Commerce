@@ -38,6 +38,8 @@ public class UserApi {
 
         //Print response body
         System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("User Added Successfully");
+        System.out.println("Now User will be logging in successfully");
 
         //Save username in TestContext
         TestContext.setUsername(userName);
