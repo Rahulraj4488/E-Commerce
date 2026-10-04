@@ -62,7 +62,7 @@ public void enterPassword(String passwordValue) throws InterruptedException {
     Thread.sleep(10000);
 //    driver.findElement(username).clear();
     driver.findElement(password).sendKeys(passwordValue);
-    System.out.println("Username entered is " +passwordValue);
+    System.out.println("Password entered is " +passwordValue);
     Thread.sleep(10000);
 }
 
