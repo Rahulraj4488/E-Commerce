@@ -44,25 +44,28 @@ public void clickLogin()
     driver.findElement(loginLink).click();
 }
 
-public void enterUsername(String usernameValue)
-{
+public void enterUsername(String usernameValue) throws InterruptedException {
 //    driver.findElement(By.id("loginusername")).sendKeys();
+    Thread.sleep(5000);
     driver.findElement(username).sendKeys(usernameValue);
+    Thread.sleep(5000);
 
 }
 
 
-public void enterPassword(String passwordValue)
-{
+public void enterPassword(String passwordValue) throws InterruptedException {
 
 //    driver.findElement(By.id("loginpassword")).sendKeys();
+    Thread.sleep(5000);
     driver.findElement(password).sendKeys(passwordValue);
+    Thread.sleep(5000);
 }
 
-public void clickLoginButton()
-{
+public void clickLoginButton() throws InterruptedException {
 //    driver.findElement(By.id("//button[text()='Log in']")).click();
+    Thread.sleep(5000);
     driver.findElement(loginButton).click();
+    Thread.sleep(5000);
 }
 
     public void verifyUsernameDisplayed(String userName)
