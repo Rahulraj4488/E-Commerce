@@ -14,6 +14,10 @@ public class loginSteps {
     public void createTestCustomerUsingAPI() {
         UserApi userApi = new UserApi();
         userApi.createUser();
+
+        // DEBUG: Print what was saved
+        System.out.println("Saved Username: " + TestContext.userName);
+        System.out.println("Saved Password: " + TestContext.password);
     }
     @When("I login to the application using the test customer")
     public void loginUsingTestCustomer() throws InterruptedException {
