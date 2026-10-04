@@ -47,7 +47,7 @@ public void clickLogin()
 public void enterUsername(String usernameValue)
 {
 //    driver.findElement(By.id("loginusername")).sendKeys();
-    driver.findElement(username).sendKeys();
+    driver.findElement(username).sendKeys(usernameValue);
 
 }
 
@@ -56,7 +56,7 @@ public void enterPassword(String passwordValue)
 {
 
 //    driver.findElement(By.id("loginpassword")).sendKeys();
-    driver.findElement(password).sendKeys();
+    driver.findElement(password).sendKeys(passwordValue);
 }
 
 public void clickLoginButton()
