@@ -2,6 +2,8 @@ package com.sdet.api;
 
 import com.sdet.utils.TestContext;
 import com.sdet.utils.TestContext.*;
+import io.cucumber.core.internal.com.fasterxml.jackson.databind.JsonNode;
+import io.cucumber.core.internal.com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
@@ -33,20 +35,29 @@ public class UserApi {
                     .extract()
                     .response();
 
-        //Print Status code
-        System.out.println("Status code: " + response.getStatusCode());
+        // Parse response
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode jsonResponse = mapper.readTree(response.getBody().asString());
 
-        //Print response body
-        System.out.println("Response body: " + response.getBody().asString());
-        System.out.println("User Added Successfully");
-        System.out.println("Now User will be logging in successfully");
+            // Check if signup was successful
+            int statusCode = response.getStatusCode();
+            if (statusCode == 200) {
+                // Save credentials in TestContext
+                TestContext.setUsername(userName);
+                TestContext.setpassword(password);
 
-        //Save username in TestContext
-        TestContext.setUsername(userName);
-
-        //Save password in TestContext
-        TestContext.setpassword(password);
-
+                System.out.println("✅ User Created Successfully");
+                System.out.println("Username: " + userName);
+                System.out.println("Password: " + password);
+                System.out.println("Now User will be logging in...");
+            } else {
+                System.out.println("❌ User creation failed with status: " + statusCode);
+                throw new RuntimeException("Failed to create user. Status: " + statusCode);
+            }
+        } catch (Exception e) {
+            System.out.println("❌ Error parsing response: " + e.getMessage());
+            throw new RuntimeException("Failed to create user", e);
+        }
     }
 }
-
