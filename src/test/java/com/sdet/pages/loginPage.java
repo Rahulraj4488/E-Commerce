@@ -47,6 +47,7 @@ public void clickLogin()
 public void enterUsername(String usernameValue) throws InterruptedException {
 //    driver.findElement(By.id("loginusername")).sendKeys();
     Thread.sleep(5000);
+    driver.findElement(username).clear();
     driver.findElement(username).sendKeys(usernameValue);
     Thread.sleep(5000);
 
@@ -57,6 +58,7 @@ public void enterPassword(String passwordValue) throws InterruptedException {
 
 //    driver.findElement(By.id("loginpassword")).sendKeys();
     Thread.sleep(5000);
+    driver.findElement(username).clear();
     driver.findElement(password).sendKeys(passwordValue);
     Thread.sleep(5000);
 }
