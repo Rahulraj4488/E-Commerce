@@ -21,7 +21,8 @@ public class loginPage {
             By.id("loginpassword");
 
     private By loginButton =
-            By.xpath("//button[text()='Log in']");
+//            By.xpath("//button[text()='Log in']");
+    By.xpath("/html/body/div[3]/div/div/div[3]/button[2]");
 
     public loginPage(WebDriver driver)
     {

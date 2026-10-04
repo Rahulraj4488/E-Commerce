@@ -12,7 +12,8 @@ public class UserApi {
 
     public void createUser() {
         String userName = "sdet_user_" + System.currentTimeMillis();
-        String password = "sdet_pass_" + System.currentTimeMillis();
+        String password = "abcd6754";
+//        String password = "sdet_pass_" + System.currentTimeMillis();
 
         String requestBody =
                 """
