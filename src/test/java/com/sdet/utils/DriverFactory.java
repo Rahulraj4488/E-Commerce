@@ -14,6 +14,11 @@ public class DriverFactory {
         DriverFactory.driver = new ChromeDriver();
         driver.manage().window().maximize();
 
+
+        // Add implicit wait
+        driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
+
+
     }
 
     public static WebDriver getDriver()
