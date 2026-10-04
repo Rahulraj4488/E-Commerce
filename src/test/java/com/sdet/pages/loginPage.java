@@ -67,7 +67,7 @@ public void enterPassword(String passwordValue) throws InterruptedException {
 }
 
 public void clickLoginButton() throws InterruptedException {
-    driver.findElement(By.id("//button[text()='Log in']")).click();
+//    driver.findElement(By.id("//button[text()='Log in']")).click();
     Thread.sleep(10000);
     driver.findElement(loginButton).click();
     Thread.sleep(10000);
