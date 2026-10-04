@@ -23,18 +23,18 @@ public class loginSteps {
         // TODO:
         // 1. Open application
         loginPageObj.openApplication();
-        Thread.sleep(5000);
+        Thread.sleep(15000);
         // 2. Click Login
         loginPageObj.clickLogin();
         // 3. Enter TestContext.username
         loginPageObj.enterUsername(TestContext.userName);
-        Thread.sleep(5000);
+        Thread.sleep(15000);
         // 4. Enter TestContext.password
         loginPageObj.enterPassword(TestContext.password);
-        Thread.sleep(5000);
+        Thread.sleep(15000);
         // 5. Click Login
         loginPageObj.clickLoginButton();
-        Thread.sleep(5000);
+        Thread.sleep(15000);
     }
 
 
