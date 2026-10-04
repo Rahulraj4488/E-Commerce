@@ -12,7 +12,7 @@ public class UserApi {
 
     public void createUser() {
         String userName = "sdet_user_" + System.currentTimeMillis();
-        String password = "F6-1906";
+        String password = "sdet1234";
 
         String requestBody =
                 """
