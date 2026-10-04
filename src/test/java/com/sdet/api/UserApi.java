@@ -45,7 +45,7 @@ public class UserApi {
         } else if (responseBody.contains("Sign up successful")) {
             System.out.println("✅ User created successfully");
         }
-        
+
         // Parse response
         try {
             ObjectMapper mapper = new ObjectMapper();
