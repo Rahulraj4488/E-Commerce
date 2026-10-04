@@ -22,6 +22,7 @@ public class loginSteps {
 
         // TODO:
         // 1. Open application
+        Thread.sleep(10000);
         loginPageObj.openApplication();
         Thread.sleep(10000);
         // 2. Click Login
