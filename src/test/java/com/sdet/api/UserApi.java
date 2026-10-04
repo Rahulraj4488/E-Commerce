@@ -40,6 +40,7 @@ public class UserApi {
         String responseBody = response.getBody().asString();
         System.out.println("Status: " + response.getStatusCode());
         System.out.println("Response: " + responseBody);
+        System.out.println("Full API Response: " + responseBody);
 
 //        // DemoBlaze returns "This user already exist" if duplicate
 //        if (responseBody.contains("This user already exist")) {
